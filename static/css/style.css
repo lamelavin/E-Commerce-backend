@@ -1,0 +1,221 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: relative; 
+}
+
+.auth-links {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-family: Arial, sans-serif;
+}
+
+.auth-links a,
+.auth-links span {
+    margin-left: 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.auth-links a:hover {
+    text-decoration: underline;
+    color: #f0f0f0;
+}
+
+main {
+    padding: 2rem;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+.product-list {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.product-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.product-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    background-color: #f9f9f9;
+}
+
+.product-card h3 {
+    margin: 0.5rem 0 0.3rem;
+    min-height: 2.5rem;
+}
+
+.product-card p {
+    margin: 0.3rem 0;
+    min-height: 3rem;
+}
+
+.product-card button {
+    margin-top: auto;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #0056b3;
+}
+
+
+.cart-container,
+.checkout-container,
+.checkout-success {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-container ul,
+.checkout-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cart-container li,
+.checkout-container li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.1rem;
+}
+
+.cart-container form,
+.checkout-container form {
+    display: inline;
+}
+
+button,
+a button {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+a button:hover {
+    background-color: #0056b3;
+}
+
+.remove-button {
+    background-color: #dc3545;
+}
+
+.remove-button:hover {
+    background-color: #b52a36;
+}
+
+.checkout-container p strong {
+    font-size: 1.2rem;
+}
+
+.checkout-success h1 {
+    color: green;
+    text-align: center;
+}
+
+.checkout-success p {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+
+
+
+/* Checkout Form Styling */
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.checkout-form label {
+    font-weight: bold;
+}
+
+.checkout-form input,
+.checkout-form textarea,
+.checkout-form select {
+    padding: 0.6rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.checkout-form .row {
+    display: flex;
+    gap: 1rem;
+}
+
+.checkout-form .row > div {
+    flex: 1;
+}
+
+.checkout-form button {
+    background-color: #28a745;
+    color: white;
+    padding: 0.7rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.checkout-form button:hover {
+    background-color: #218838;
+}

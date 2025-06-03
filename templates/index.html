@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Luxious.in</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Luxious E-Commerce Site</h1>
+        <div class="auth-links">
+            <a href="{{ url_for('cart') }}" class="cart-link">🛒 Cart ({{ session['cart'] | length if session.get('cart') else 0 }})</a>
+            {% if session.get('username') %}
+                <span>Welcome, {{ session['username'] }}!</span>
+                <a href="{{ url_for('logout') }}">Logout</a>
+            {% else %}
+                <a href="{{ url_for('login') }}">Login</a>
+                <a href="{{ url_for('register') }}">Register</a>
+            {% endif %}
+        </div>
+    </header>
+
+    <main>
+        <h2>Product Listing</h2>
+        <div class="product-list">
+            {% for product in products %}
+            <div class="product-card">
+                <img src="{{ product.image_url }}" alt="{{ product.name }}" />
+                <h3>{{ product.name }}</h3>
+                <p>{{ product.description }}</p>
+                <p>₹ {{ product.price }}</p>
+
+                <form method="post" action="{{ url_for('add_to_cart', product_id=product._id) }}">
+                    <button>Add to Cart</button>
+                </form>
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+
+    
+</body>
+</html>
